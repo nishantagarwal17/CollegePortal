@@ -1,0 +1,368 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:textColor="@color/tx"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.npdevelopers.attendenceportal.SignupFragment">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/teacher_name"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Contact number"
+                        android:inputType="phone"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="City"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:gravity="center"
+                        android:padding="15sp"
+                        android:text="Select gender"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:orientation="horizontal"
+                        android:padding="15sp">
+
+                        <RadioButton
+                            android:id="@+id/teacher_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/teacher_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Female" />
+
+                        <RadioButton
+                            android:id="@+id/teacher_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Others" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/teacher_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Date of Birth"
+                        android:inputType="date"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_id"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Teacher ID"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/teacher_confirmpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:padding="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/teacher_tandc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60sp"
+                        android:padding="15sp"
+                        android:text=" I confirm that the above information is true and accurate." />
+
+                    <Button
+                        android:id="@+id/teacher_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10sp"
+                        android:layout_weight="0.13"
+                        android:padding="10sp"
+                        android:text="SIGN UP"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/student_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Contact number"
+                        android:inputType="phone"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="15sp" />
+
+                    <Spinner
+                        android:layout_gravity="center"
+                        android:id="@+id/student_sem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_mname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Mother's name"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_fname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Father's name"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_gname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Guardian's name"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="City"
+                        android:inputType="textPersonName"
+                        android:padding="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:gravity="center"
+                        android:padding="15sp"
+                        android:text="Select gender"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:orientation="horizontal"
+                        android:padding="15sp">
+
+                        <RadioButton
+                            android:id="@+id/student_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/student_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Female" />
+
+                        <RadioButton
+                            android:id="@+id/student_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Others" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/student_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:hint="Date of Birth"
+                        android:inputType="date"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Student ID"
+                        android:inputType="text"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="15sp" />
+
+                    <EditText
+                        android:id="@+id/student_confirmpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:ems="10"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:padding="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/student_tandc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60sp"
+                        android:padding="15sp"
+                        android:text="I confirm that the information given in this form is true, complete and accurate." />
+
+                    <Button
+                        android:id="@+id/student_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.13"
+                        android:padding="20sp"
+                        android:text="SIGN UP"
+                        android:textSize="22sp" />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+        </ScrollView>
+    </TabHost>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Attendence Portal</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Strings related to login -->
+
+    <string name="DOMAIN">https://bhuportal.000webhostapp.com</string>
+</resources>
